@@ -1,3 +1,13 @@
+
+<?php
+	// Initialiser la session
+	session_start();
+	// Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
+	if(!isset($_SESSION["username"])){
+		header("Location: login.php");
+		exit(); 
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +18,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="..assets/css/style.css"/>
 </head>
 <body>
+    <div class="sucess">
+		<h2>Bienvenue dans votre admin <?php echo $_SESSION['username']; ?>!</h2>
+        <!--<p>C'est votre tableau de bord.</p>-->
+        <p class="box-register">Vous êtes nouveau ici? <a href="register.php">S'inscrire</a></p>
+		<a href="logout.php">Déconnexion</a>
+		</div>
     <div class="title-admin">
-        <h1 class="text-logo">WEB BOOK ADMIN</h1>
+        <h1 id="title" class="text-logo">WEB BOOK ADMIN</h1>
     </div>
     <div class="container admin">
         <div class="row">
@@ -52,7 +68,6 @@
                     }
                     Database::disconnect();
                     ?>
-
                 </tbody>
             </table>
         </div>

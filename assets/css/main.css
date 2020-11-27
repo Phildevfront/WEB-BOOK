@@ -15,8 +15,12 @@
     padding: 0;
   }
   *{scroll-behavior: smooth}
+/*---------------------------------------------CONTAINER---------------------------------------*/
+  .flex-row{display:flex;flex-direction:row; flex-wrap: wrap}
 
-  
+
+
+/*---------------------------------------------NAVBAR------------------------------------------*/
   .nav-container{
     width: 100vw;
     background-color: var(--lightdark);
@@ -116,8 +120,10 @@
     color: var(--white);
     text-decoration: none;
   }
-/*----------------------------END NAVBAR-------------------------------------------*/
+/*-------------------------------------------------END NAVBAR-------------------------------------------*/
 
+
+/*-------------------------------------------------HOME-------------------------------------------------*/
 .home{
   display: flex;
   flex-flow: row wrap;
@@ -164,14 +170,18 @@
 
 .btn.btn-link{
   font-family: 'Raleway', sans-serif;
-  font-size: 16pt;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 2px;
   color: var(--darkgray);
   background-color:transparent;
   text-decoration: none;
   border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;
   padding: 12px 30px 17px 30px;
   transition: all 0.4s ease;
   outline: none;
+  
 }
 
 
@@ -204,7 +214,8 @@ a.link-profil{
   transition: all 0.4s ease;
 }
 
-/*-------------------------------------SECTION ABOUT--------------------------------------*/
+
+/*----------------------------------------------SECTION ABOUT--------------------------------------*/
 
 #anchor1.about{
   display: flex;
@@ -268,7 +279,48 @@ a.link-profil{
   margin: 50px;
 }
 
-/*---------------------------------------SECTION PROJECTS----------------------------*/
+/*----------------------------------------------------SECTION DOWNLOAD------------------------------------*/
+.download{
+  margin:40px 40px 60px 40px;
+}
+
+.btn-download{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn.btn-link.download{
+  font-family: 'Raleway', sans-serif;
+  font-size: 10pt;
+  color: var(--darkgray);
+  background-color:transparent;
+  text-decoration: none;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  padding: 12px 30px 17px 30px;
+  transition: all 0.4s ease;
+  outline: none;
+}
+
+.btn.btn-link.download:hover{
+  cursor: pointer;
+  background-color: #04c2c9;
+  border-color: #04c2c9;
+}
+
+.link-download{
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: rgb(0, 0, 0);
+}
+  
+
+/*---------------------------------------------------SECTION PROJECTS--------------------------------------*/
 
 #anchor2.projects{
   width: 100vw;
@@ -278,6 +330,7 @@ a.link-profil{
   justify-content: center;
   flex-wrap: wrap;
   text-align: center;
+  padding-bottom: 120px;
 }
 
 .container-projects{
@@ -307,8 +360,6 @@ a.link-profil{
 }
 
 /*--------------------------------------PROJECTS CARD-----------------------------------------*/
-
-          /*-----------------------------NAV FILTER--------------------------------*/
 
 /*-----------------------------NAV FILTER--------------------------------*/
 
@@ -364,10 +415,12 @@ a.link-profil{
   display: block;
 }
 
+/*-----------------------------END NAV FILTER--------------------------------*/
 
 
 
-          /*-----------------------------END NAV FILTER--------------------------------*/
+
+
 .cover{
   display: flex;
   flex-direction: row;
@@ -415,8 +468,8 @@ a.link-profil{
 
 .flip-card-front, .flip-card-back {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   
@@ -440,6 +493,7 @@ a.link-profil{
   background-color: rgb(0, 0, 0);
   transform: rotateY(180deg);
   border-radius: 5px;
+  padding: 20px;
   
 }
 
@@ -498,6 +552,157 @@ button.link:active{
   /*transform: scale(0.98);*/
   border-radius: 1px;
 }
+
+/*------------------------------------CONTACT-----------------------------------------*/
+
+
+input[type=text], select, textarea {
+  font-family: 'Raleway', sans-serif;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  margin-top: 10px;
+}
+
+label {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.blue-star{
+  font-size: 15px;
+  color:#3441f8;
+}
+
+input[type=submit] {
+  background: #04c2c9;
+  color: #fff;
+  border: 1px solid #ccc;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin-top: 20px;
+  transition: all 0.4s ease-in-out;
+  outline: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.form-control{
+  height: 50px;
+  font-size: 1.1em;
+}
+
+input[type=submit]:hover {
+  background-color: #01767a;
+  border-color: #01767a;
+}
+
+.form-container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 50px;
+}
+
+.col-25 {
+  float: left;
+  width: 20%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 80%;
+  margin-top: 5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.contact-me{
+  background-color: #f2f2f2 ;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.contact-me p{
+  padding-top: 50px;
+}
+
+.comments{
+  font-style: italic;
+  font-size: 0.9em;
+  color: #d82c2e;
+  height: 25px;
+}
+
+.thanks{
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+/*--------------------------------------------------FOOTER---------------------------------------------*/
+
+section#footer{
+  background:#101010;
+  width: 100vw;
+  padding: 100px 0 100px 0;
+}
+
+
+ul.flex-row.footer-social{
+  list-style: none;
+  font-size: 2.5em;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+div.copyright{
+  text-align: center;
+  font-size: 0.9em;
+  letter-spacing: 0.2em;
+  color: #b3b2b2c4;
+  margin-top:100px;
+}
+
+i.fab.fa-linkedin-in{
+  color:rgba(140, 140, 140, 0.899);
+}
+
+i.fab.fa-linkedin-in:hover{
+  color:#11ABB0;
+}
+
+
+i.fab.fa-github{
+  color:rgba(140, 140, 140, 0.899);
+}
+
+i.fab.fa-github:hover{
+  color:#11ABB0;
+}
+
+i.fas.fa-envelope-square{
+  color:rgba(14, 14, 14, 0.899);
+}
+
+i.fas.fa-envelope:hover{
+  color:#11ABB0;
+}
+
+
 
 /*------------------------------------MEDIA QUERIES---------------------------------*/
   @media screen and (max-width:768px) {
@@ -597,4 +802,12 @@ button.link:active{
         transform: translateY(-8px) rotate(-45deg);
       }
   
+  }
+
+  /*------------------FORM--------------------*/
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 20px;
+    }
   }

@@ -13,7 +13,7 @@
         $statement = $db->prepare("DELETE FROM items WHERE id = ?");
         $statement->execute(array($id));
         Database::disconnect();
-        header("Location: index.php");
+        header("Location: index.php");//CHANGER LE NOM------------------------------------------------------------------
 
     }
 

@@ -78,7 +78,7 @@
             $statement = $db->prepare("INSERT INTO items (title,description,link,category,image) values(?, ?, ?, ?, ?)");
             $statement->execute(array($title,$description,$link,$category,$image));
             Database::disconnect();
-            header("Location: index.php");
+            header("Location: index.php");//CHANGER LE NOM-------------------------------------------------------
 
         }
 

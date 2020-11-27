@@ -92,7 +92,7 @@
             }
             
             Database::disconnect();
-            header("Location: index.php");
+            header("Location: index.php");// CHANGER LE NOM-----------------------------------------------------------------------------
         }
         else if($isImageUpdated && !$isUploadSuccess)
         {
@@ -137,11 +137,12 @@
     <title>ADMIN UPDATE WEB BOOK</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    
 </head>
 <body>
     <div class="title-admin">

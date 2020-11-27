@@ -1,0 +1,54 @@
+/*---------------------------------admin-----------------------------------*/
+/*RESET*/
+*{margin:0;padding:0}
+*{scroll-behavior: smooth}
+
+
+
+.tex-logo{
+  text-align: center;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+ul.nav.nav-pills{
+  margin: 40px 0;
+}
+
+a.card{
+  color:silver;
+}
+
+li{
+  outline: none;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+  background: #e7480f;
+}
+
+.nav>li>a:focus, .nav>li>a:hover{
+  color: #e7480f;
+  background: rgb(77, 77, 77);
+}
+
+.nav>li>a{
+  color: rgb(75, 75, 75);
+  font-size: 1.3rem;
+}
+
+.title-admin {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
