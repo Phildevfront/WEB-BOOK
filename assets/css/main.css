@@ -580,9 +580,9 @@ label {
 }
 
 input[type=submit] {
-  background: #04c2c9;
-  color: #fff;
-  border: 1px solid #ccc;
+  background: transparent;
+  color: #000;
+  border: 1px solid rgb(0, 0, 0);
   padding: 12px 20px;
   border-radius: 4px;
   cursor: pointer;
@@ -590,8 +590,11 @@ input[type=submit] {
   margin-top: 20px;
   transition: all 0.4s ease-in-out;
   outline: none;
-  font-weight: bold;
-  letter-spacing: 1px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.8em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: rgb(0, 0, 0);
 }
 
 .form-control{
@@ -600,8 +603,8 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #01767a;
-  border-color: #01767a;
+  background-color:  #04c2c9;
+  border-color:  #04c2c9;
 }
 
 .form-container {

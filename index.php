@@ -218,7 +218,7 @@
           <div class="social">
               <ul class="flex-row footer-social">
                   <li>
-                      <a href="https://www.linkedin.com/in/philippe-baurens-aa44a06a/" target="_blank">
+                      <a href="https://www.linkedin.com/in/philippe-baurens/" target="_blank">
                       <span style="color:Grey;"><i class="fab fa-linkedin-in"></i></span>
                       </a>
                   </li>
