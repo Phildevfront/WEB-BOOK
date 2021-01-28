@@ -1,14 +1,14 @@
 <?php
-// Informations d'identification
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'root');
-define('DB_NAME', 'registration');
+
+define('DB_SERVER', 'localhost'); // mask.o2switch.net
+define('DB_USERNAME', 'root'); // baph4737
+define('DB_PASSWORD', 'root'); // RMRvNgmAVYNv
+define('DB_NAME', 'registration'); //baph4737_registration
  
-// Connexion � la base de donn�es MySQL 
+
 $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
  
-// V�rifier la connexion
+
 if($conn === false){
     die("ERREUR : Impossible de se connecter. " . mysqli_connect_error());
 }

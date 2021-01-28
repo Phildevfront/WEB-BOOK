@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css"/>
+	<link rel="stylesheet" href="styles.css"/>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 </head>
 <body>
@@ -12,7 +12,7 @@ require('config.php');
 session_start();
 
 if (isset($_POST['username'])){
-	$username = stripslashes($_REQUEST['username']);
+	$username = stripslashes($_REQUEST['username']);// récupère le username et enlève les antislash
 	$username = mysqli_real_escape_string($conn, $username);
 	$password = stripslashes($_REQUEST['password']);
 	$password = mysqli_real_escape_string($conn, $password);
@@ -28,12 +28,11 @@ if (isset($_POST['username'])){
 }
 ?>
 <form class="box" action="" method="post" name="login">
-<!--<h1 class="box-logo box-title"><a href="https://waytolearnx.com/">WayToLearnX.com</a></h1>-->
 <h1 class="box-title">Connexion au panel Admin</h1>
 <input type="text" class="box-input" name="username" placeholder="Nom d'utilisateur">
 <input type="password" class="box-input" name="password" placeholder="Mot de passe">
 <input type="submit" value="Connexion " name="submit" class="box-button">
-<!--<p class="box-register">Vous êtes nouveau ici? <a href="register.php">S'inscrire</a></p>-->
+<p class="box-register">Vous êtes nouveau ici? <a href="register.php">S'inscrire</a></p>
 
 <?php if (! empty($message)) { ?>
     <p class="errorMessage"><?php echo $message; ?></p>

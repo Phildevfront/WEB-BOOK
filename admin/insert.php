@@ -64,7 +64,7 @@
             }
             if($isUploadSuccess)
             {
-                if(!move_uploaded_file($_FILES["image"]["tmp_name"], $imagePath)) /* prend l'image pour la passer a la variable $imagePath  */
+                if(!move_uploaded_file($_FILES["image"]["tmp_name"], $imagePath)) 
                 {
                     $imageError = "Il y a eu une erreur lors de l'upload";
                     $isUploadSuccess = false;
@@ -78,7 +78,7 @@
             $statement = $db->prepare("INSERT INTO items (title,description,link,category,image) values(?, ?, ?, ?, ?)");
             $statement->execute(array($title,$description,$link,$category,$image));
             Database::disconnect();
-            header("Location: index.php");//CHANGER LE NOM-------------------------------------------------------
+            header("Location: index.php");
 
         }
 
@@ -88,9 +88,9 @@
 
     function checkInput($data)
     {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
+        $data = trim($data); // supprime les espaces les retour a la ligne
+        $data = stripslashes($data); //supprime les antislash
+        $data = htmlspecialchars($data); // previent de la faille XSS (INJECTION DE SCRIPT DS L'URL)
         return $data;
     }
 ?>
@@ -105,11 +105,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="title-admin">
-        <h1 class="text-logo">WEB BOOK-INSERT</h1>
+        <h1 class="text-logo" style="text-align:center">WEB BOOK-INSERT</h1>
     </div>
     <div class="container admin">
         <div class="row">
@@ -124,7 +124,7 @@
                     </div>
                     <div class="form-group">
                         <label for="description">Description :</label>
-                        <input type="text" class="form-control" id="description" name="description" placeholder="Description" value="<?php echo $description; ?>">
+                        <textarea id="description" name="description" class="form-control" placeholder="Description" style="height:200px" value="<?php echo $description; ?>"></textarea>
                         <span class="help-inline"><?php echo $descriptionError; ?></span>
                     </div>
                     <div class="form-group">

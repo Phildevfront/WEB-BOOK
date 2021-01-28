@@ -1,5 +1,7 @@
+/*----------------------------------------------COLOR--------------------------------------*/
 :root{
-    --brightcyan: #04c2c9;
+    --brightcyan2: #04c2c9;
+    --brightcyan: #00a2a2;
     --darkgray: #212329;
     --darkgrayTransparent: #21232961;
     --brightred: #F9423D;
@@ -7,20 +9,26 @@
     --lightred: #f9433dcc;
     --lightyellow:  #f4a235;
     --lightdark: rgba(19, 18, 18, 0.664);
+    --deepdark:#000;
   }
+
+ body{
+   overflow-x: hidden;
+ }
   
   *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
+
   *{scroll-behavior: smooth}
+
 /*---------------------------------------------CONTAINER---------------------------------------*/
   .flex-row{display:flex;flex-direction:row; flex-wrap: wrap}
 
 
-
-/*---------------------------------------------NAVBAR------------------------------------------*/
+/*---------------------------------------------NAVBAR---------------------*/
   .nav-container{
     width: 100vw;
     background-color: var(--lightdark);
@@ -33,13 +41,8 @@
     z-index: 9999;
   }
   
-  #nav.navbar{
-    background-color: var(--lightdark);
-  }
-  
   #nav.navbar.hidden {
     top: -80px;
-  
   }
   
   .navbar{
@@ -51,7 +54,6 @@
     width: 100vw;
     max-width: auto;
     margin: 0 auto;
-    
   }
   
   #navbar-logo{
@@ -59,32 +61,31 @@
     margin-left: 20px;
     width: 240px;
     margin-bottom: 10px;
-  }
-  
-  #navbar-logo{
     cursor: pointer;
   }
   
   .nav-menu{
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto);
     list-style: none;
     text-align: center;
     justify-self: flex-end;
+    grid-gap: 30px;
   }
   
   .nav-links{
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 0.9em;
+    font-weight: 400;
     letter-spacing: 2px;
     color: rgb(255, 255, 255);
     text-decoration: none;
-    padding-right: 40px;
+    text-shadow: 2px  2px 2px rgb(0, 0, 0);
   }
   
   
   .nav-links:hover{
-    color: #04c2c9;
+    color:var(--brightcyan);
     transition: all 0.2s ease-out;
   }
   
@@ -112,16 +113,21 @@
     background: var(--white) ;
   }
 
-  .header_navbar-logo-title{
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.1em;
-    letter-spacing: 2px;
-    font-weight: 200;
-    color: var(--white);
-    text-decoration: none;
-  }
-/*-------------------------------------------------END NAVBAR-------------------------------------------*/
 
+  img.brandlogo{
+    width: 50px;
+    position: relative;
+    top: 6px;
+    left: 10px;
+  }
+
+ 
+  .nav-active {
+    background-color:rgb(0, 0, 0);
+}
+
+
+/*-----------------------------END NAVBAR--------------------------*/
 
 /*-------------------------------------------------HOME-------------------------------------------------*/
 .home{
@@ -141,7 +147,6 @@
   bottom: 100px;
 }
 
-
 .wrapper{
   display: flex;
   flex-flow: column;
@@ -152,64 +157,59 @@
 
 .name h1{
   font-family:'Raleway', sans-serif; 
-  font-size: 2rem;
-  font-weight: 300;
-  letter-spacing: 3px;
+  font-size: 4rem;
+  font-weight: 100;
+  letter-spacing: 6px;
   color: var(--white);
+  text-shadow: 2px  2px 2px rgb(69, 69, 69);
 }
-
 
 .title h2{
   margin: 30px 0;
   font-family:'Raleway', sans-serif; 
-  font-size: 1.4rem;
-  font-weight: 100;
+  font-size: 1.2rem;
+  font-weight: 400;
   letter-spacing: 3px;
   color: var(--white);
+  padding: 10px;
+  border-radius: 5px;
 }
 
-.btn.btn-link{
-  font-family: 'Raleway', sans-serif;
+
+/*.link-profil{
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1em;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 2px;
-  color: var(--darkgray);
+  color: rgb(0, 0, 0);
   background-color:transparent;
   text-decoration: none;
   border: 1px solid rgb(0, 0, 0);
   border-radius: 4px;
-  padding: 12px 30px 17px 30px;
+  padding: 14px 60px 14px 60px;
   transition: all 0.4s ease;
   outline: none;
-  
 }
 
+.link-profil:hover{
+  cursor: pointer;
+  background-color: var(--brightcyan);
+  border-color: var(--brightcyan);
+}*/
 
-.btn.btn-link:hover{
-cursor: pointer;
-background-color: #04c2c9;
-border-color: #04c2c9;
-}
 
-a.link-profil{
-  text-decoration: none;
-  font-family: 'Raleway', sans-serif;
-  font-size: 1em;
-  font-weight: 300;
-  color: rgb(0, 0, 0);
-}
-
-.material-icons {
+span.material-icons {
   position: relative;
-  top:5px;
-  left:10px
+  color: #ffffff;
+  font-size: 62px; 
 }
 
-.btn.btn-link .material-icons{
+span.material-icons{
   transition: transform 0.4s;
 }
 
-.btn.btn-link:hover .material-icons{
+span.material-icons:hover{
   transform: rotate(90deg);
   transition: all 0.4s ease;
 }
@@ -224,8 +224,6 @@ a.link-profil{
   margin-bottom: 50px;
 }
 
-
-
 .container-title-section{
   display: flex;
   flex-flow: column;
@@ -238,6 +236,7 @@ a.link-profil{
   font-size: 1.5em;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
+  letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--darkgray);
   text-align: center;
@@ -257,7 +256,6 @@ a.link-profil{
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  
 }
 
 .picture img{
@@ -273,15 +271,23 @@ a.link-profil{
   font-family: 'Raleway', sans-serif;
   font-weight: 200;
   line-height: 20pt;
+  letter-spacing: 1px;
   color: var(--darkgray);
   width: 400px;
   text-justify: auto;
   margin: 50px;
 }
 
+.research{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 /*----------------------------------------------------SECTION DOWNLOAD------------------------------------*/
 .download{
-  margin:40px 40px 60px 40px;
+  margin:40px 40px 40px 40px;
 }
 
 .btn-download{
@@ -291,32 +297,37 @@ a.link-profil{
   align-items: center;
 }
 
-.btn.btn-link.download{
-  font-family: 'Raleway', sans-serif;
-  font-size: 10pt;
-  color: var(--darkgray);
+.link-download{
+  text-decoration: none;
+  
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: var(--deepdark);
   background-color:transparent;
   text-decoration: none;
   border: 1px solid rgb(0, 0, 0);
   border-radius: 4px;
-  padding: 12px 30px 17px 30px;
+  padding: 12px 60px 17px 60px;
   transition: all 0.4s ease;
   outline: none;
+  margin-bottom: 20px;
 }
 
-.btn.btn-link.download:hover{
+.link-download:hover{
   cursor: pointer;
-  background-color: #04c2c9;
-  border-color: #04c2c9;
+  background-color: var(--brightcyan);
+  border-color: var(--brightcyan);
 }
 
-.link-download{
-  text-decoration: none;
-  font-family: 'Raleway', sans-serif;
-  font-size: 1em;
-  font-weight: 500;
-  letter-spacing: 2px;
-  color: rgb(0, 0, 0);
+.link-download .material-icons{
+  transition: transform 0.4s;
+}
+
+.link-download:hover .material-icons{
+  transform: rotate(90deg);
+  transition: all 0.4s ease;
 }
   
 
@@ -343,8 +354,9 @@ a.link-profil{
 
 .projects-text{
   font-family: 'Raleway', sans-serif;
+  font-size: 1.1em;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   line-height: 20pt;
   color: var(--darkgray);
   text-align: center;
@@ -354,12 +366,13 @@ a.link-profil{
 .projects-cards {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
-  width: 90vw;
-  background-color: #c7c7c7;
+  width: 100vw;
+  height: 100vh;
 }
 
-/*--------------------------------------PROJECTS CARD-----------------------------------------*/
+/*--------------------------------------PROJECTS-----------------------------------------*/
 
 /*-----------------------------NAV FILTER--------------------------------*/
 
@@ -367,8 +380,11 @@ a.link-profil{
 .nav-filter-container{
   display: flex;
   flex-flow: row wrap;
-  width: 90vw;
-  background-color:  #c7c7c7;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  margin-top: 10px;
+  margin-bottom: 60px;
 }
 
 .nav-projects{
@@ -378,7 +394,6 @@ a.link-profil{
   align-items: center;
   height: 80px;
   width: 90vw;
-
 }
 
 .nav.nav-filter-projects{
@@ -389,22 +404,36 @@ a.link-profil{
   list-style: none;
 }
 
+.nav-filter-projects>li.active>a, .nav-filter-projects>li.active>a:focus, .nav-filter-projects>li.active>a:hover{
+  background: var(--brightcyan);
+  color: #f2f2f2;
+  border-color: var(--brightcyan);
+}
+
+
 .link-filter{
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Open Sans', sans-serif;
   font-size: 0.9em;
+  font-weight: 400;
   letter-spacing: 1px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-decoration: none;
-  padding: 10px 20px 10px 20px;
-  border: 1px solid transparent;
+  padding: 10px 70px 10px 70px;
+  border: 1px solid black;
   border-radius: 3px;
+  margin-right: 10px;
+  transition: all 0.4s ease-out;
 }
 
 .link-filter:hover{
-  background-color:blue;
-  transition: all 0.2s ease-out;
+  color: rgb(255, 255, 255);
+  background-color:var(--brightcyan);
+  border-color: var(--brightcyan);
+  transition: all 0.4s ease-out;
+  outline: none;
 }
 
 .tab-content > .tab-pane{
@@ -418,9 +447,6 @@ a.link-profil{
 /*-----------------------------END NAV FILTER--------------------------------*/
 
 
-
-
-
 .cover{
   display: flex;
   flex-direction: row;
@@ -431,15 +457,13 @@ a.link-profil{
 
 .flip-card {
   background-color: transparent;
-  width: 500px;
-  height: 381px;
+  width: 500px; 
+  height: 381px; 
   perspective: 1000px;
-  padding: 30px;
+  /*padding: 30px;
   margin-left: 20px;
   margin-right: 20px;
-  margin-bottom: 50px;
-  
-  
+  margin-bottom: 50px;*/
 }
 
 .flip-card-inner img{
@@ -468,8 +492,8 @@ a.link-profil{
 
 .flip-card-front, .flip-card-back {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 500px;
+  height: 281px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   
@@ -499,7 +523,7 @@ a.link-profil{
 
 .flip-card-back h2{
   font-family:'Raleway', sans-serif;
-  color: var(--brightcyan);
+  color: var(--lightred);
   font-size: 1.4rem;
   letter-spacing: 3px;
   font-weight: 500;
@@ -544,12 +568,10 @@ button.link{
 button.link:hover{
   background-color: var(--brightcyan);
   border-color: var(--brightcyan);
-  /*transform: scale(1.05);*/
   border-radius: 1px;
 }
 
 button.link:active{
-  /*transform: scale(0.98);*/
   border-radius: 1px;
 }
 
@@ -574,10 +596,6 @@ label {
   margin-top: 10px;
 }
 
-.blue-star{
-  font-size: 15px;
-  color:#3441f8;
-}
 
 input[type=submit] {
   background: transparent;
@@ -599,12 +617,13 @@ input[type=submit] {
 
 .form-control{
   height: 50px;
-  font-size: 1.1em;
+  font-size: 0.9em;
 }
 
 input[type=submit]:hover {
-  background-color:  #04c2c9;
-  border-color:  #04c2c9;
+  background-color:  var(--brightcyan);
+  border-color: var(--brightcyan);
+  color: #fff;
 }
 
 .form-container {
@@ -635,11 +654,12 @@ input[type=submit]:hover {
 .contact-me{
   background-color: #f2f2f2 ;
   font-family: 'Raleway', sans-serif;
-  font-size: 1.2em;
+  
   text-align: center;
   letter-spacing: 2px;
 }
 .contact-me p{
+  font-size: 1em;
   padding-top: 50px;
 }
 
@@ -651,9 +671,13 @@ input[type=submit]:hover {
 }
 
 .thanks{
-  text-align: center;
+  font-family: 'Raleway', sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
+  background-color:#04c2c9;
+  text-align: center;
+  margin-top: 40px;
+  letter-spacing: 2px;
 }
 /*--------------------------------------------------FOOTER---------------------------------------------*/
 
@@ -672,9 +696,9 @@ ul.flex-row.footer-social{
 }
 
 
-div.copyright{
+.copyright{
   text-align: center;
-  font-size: 0.9em;
+  font-size: 0.8em;
   letter-spacing: 0.2em;
   color: #b3b2b2c4;
   margin-top:100px;
@@ -685,7 +709,7 @@ i.fab.fa-linkedin-in{
 }
 
 i.fab.fa-linkedin-in:hover{
-  color:#11ABB0;
+  color:#0966c2;
 }
 
 
@@ -694,7 +718,7 @@ i.fab.fa-github{
 }
 
 i.fab.fa-github:hover{
-  color:#11ABB0;
+  color:#fff;
 }
 
 i.fas.fa-envelope-square{
@@ -702,115 +726,10 @@ i.fas.fa-envelope-square{
 }
 
 i.fas.fa-envelope:hover{
-  color:#11ABB0;
+  color:var(--brightcyan);
 }
 
 
 
 /*------------------------------------MEDIA QUERIES---------------------------------*/
-  @media screen and (max-width:768px) {
-  
-      .nav-container{
-        position: relative;
-        
-      }
-  
-      .nav-menu{
-        display: grid;
-        grid-template-columns: auto;
-        /*background: var(--brightred);*/
-        margin: 0;
-        width: 100%;
-        position: absolute;
-        top: 80px;
-        left: -100%;
-        opacity: 0;
-        transition: all 0.7s ease;
-      }
-
-  
-      #navbar-logo {
-        margin-left: 20px;
-        margin-bottom: 10px;
-      }
-  
-      .nav-menu.active{
-        background: var(--lightdark);
-        left: 0;
-        opacity: 1;
-        transition: all 0.7s ease;
-      }
-  
-      .nav-links{
-        text-align: center;
-        line-height: 60px;
-        width: 100%;
-        display: table;
-      }
-  
-      .nav-links:hover{
-        background-color: var(--brightcyan);
-        color: var(--white);
-        transition: all 0.4s ease-out;
-      }
-  
-      .navbar{
-        width: 100%;
-      }
-  
-      .nav-links-btn{
-        border: none;
-        padding: 0;
-        border-radius: 0;
-        background-color: var(--darkgray);
-        color: var(--white);
-        transition: all 0.4s ease-out;
-        margin-left: 0;
-      }
-  
-      .nav-links-btn:hover{
-        border: none;
-        padding: 0;
-        border-radius: 0;
-        background-color: var(--lightyellow);
-        color: var(--brightred);
-        transition: all 0.4s ease-out;
-      }
-  
-      #mobile-menu{
-        position: absolute;
-        top: 20%;
-        right: 5%;
-        transform: translate(5%, 20%);
-      }
-  
-      .menu-toggle .bar{
-        display: block;
-        cursor: pointer;
-      }
-  
-      .menu-toggle:hover{
-        cursor: pointer;
-      }
-  
-      #mobile-menu.is-active .bar:nth-child(2) {
-        opacity: 0;
-      }
-  
-      #mobile-menu.is-active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-      }
-  
-      #mobile-menu.is-active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-      }
-  
-  }
-
-  /*------------------FORM--------------------*/
-  @media screen and (max-width: 600px) {
-    .col-25, .col-75, input[type=submit] {
-      width: 100%;
-      margin-top: 20px;
-    }
-  }
+ 

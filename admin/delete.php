@@ -13,7 +13,7 @@
         $statement = $db->prepare("DELETE FROM items WHERE id = ?");
         $statement->execute(array($id));
         Database::disconnect();
-        header("Location: index.php");//CHANGER LE NOM------------------------------------------------------------------
+        header("Location: index.php");
 
     }
 
@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="title-admin">

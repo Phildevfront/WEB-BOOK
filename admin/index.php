@@ -1,8 +1,8 @@
 
 <?php
-	// Initialiser la session
+	
 	session_start();
-	// Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
+	
 	if(!isset($_SESSION["username"])){
 		header("Location: login.php");
 		exit(); 
@@ -19,12 +19,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="..assets/css/style.css"/>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
     <div class="sucess">
-		<h2>Bienvenue dans votre admin <?php echo $_SESSION['username']; ?>!</h2>
-        <!--<p>C'est votre tableau de bord.</p>-->
-        <p class="box-register">Vous êtes nouveau ici? <a href="register.php">S'inscrire</a></p>
+		<h2>Bienvenue dans votre panel <?php echo $_SESSION['username'];?> !</h2>
 		<a href="logout.php">Déconnexion</a>
 		</div>
     <div class="title-admin">
@@ -46,11 +45,11 @@
                 <tbody>
 
                     <?php
-                    require 'database.php';/* requiere database.php pour utiliser son contenu */
-                    $db = Database::connect();/* accès a la classe Database retourne la connexion vers la DataBase ds la variable db */
+                    require 'database.php';
+                    $db = Database::connect();
                     $statement = $db->query('SELECT items.id, items.title, items.description, items.link, categories.name AS category 
-                                            FROM items LEFT JOIN categories ON items.category = categories.id');/* Selection des informations de la base *//* ORDER BY articles.id DESC */
-                    while($item = $statement->fetch()) /* affichage des informations */
+                                            FROM items LEFT JOIN categories ON items.category = categories.id');
+                    while($item = $statement->fetch()) 
                     {
                         echo '<tr>';
                         echo '<td>' . $item['title'] . '</td>';

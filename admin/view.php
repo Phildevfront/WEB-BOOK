@@ -1,9 +1,9 @@
 <?php
     require 'database.php';
 
-if(!empty($_GET['id']))/* récupération id */
+if(!empty($_GET['id']))
 {
-    $id = checkInput($_GET['id']);/* check la variable id */
+    $id = checkInput($_GET['id']);
 }   
 
 $db = Database::connect();
@@ -38,6 +38,7 @@ function checkInput($data)
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="..assets/css/style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="title-admin">
@@ -72,13 +73,6 @@ function checkInput($data)
             <div class="col-sm-6 site">
                 <div class="bg-grey white-logo">
                     <img src="<?php echo '../images/' . $item['image'] ; ?>">
-                    <!--<div class="text-articles">  
-                        <p><?php echo $item['category']; ?></p>                        
-                        <p><?php echo $item['title']; ?></p>
-                        <p><?php echo $item['name']; ?></p>
-                        <p><?php echo $item['description']; ?></p>
-                        <p><?php echo $item['link']; ?></p>                     
-                    </div>-->
                 </div>
             </div>
             

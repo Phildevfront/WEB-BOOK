@@ -22,6 +22,11 @@ body {
     text-align:center;
     margin: -27px -26px 26px;
   }
+
+  .text-logo{
+    text-align: center;
+  }
+  
   .box-button {
     border-radius: 5px;
     background: #d2483c;
@@ -61,12 +66,13 @@ body {
       border-color:#5c7186;
   }
   .sucess{
-      text-align: center;
+      text-align: center !important;
       color: rgb(0,0,0);
   }
   .sucess a {
       text-decoration: none;
       color: #0186fa;
+      font-size: 1.5em;
   }
   p.errorMessage {
       background-color: #e66262;
@@ -80,7 +86,7 @@ body {
 }
 
 a.backTosite{
-  background: rgb(201, 47, 47);
+  background: #d2483c;
     /*border: 1px solid #000;*/
     border-radius: 5px;
     text-decoration: none;

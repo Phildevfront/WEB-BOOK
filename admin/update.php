@@ -2,9 +2,9 @@
 
     require 'database.php';
 
-    if(!empty($_GET['id'])) /* envoie id à récupérer ds la variable id */
+    if(!empty($_GET['id'])) 
     {
-        $id = checkInput($_GET['id']); /* nettoyage id avc checkInput*/
+        $id = checkInput($_GET['id']); 
     }
 
     $titleError = $descriptionError = $linkError = $categoryError = $imageError = $title = $description = $link = $category = $image = "";
@@ -68,7 +68,7 @@
             }
             if($isUploadSuccess)
             {
-                if(!move_uploaded_file($_FILES["image"]["tmp_name"], $imagePath)) /* prend l'image pour la passer a la variable $imagePath  */
+                if(!move_uploaded_file($_FILES["image"]["tmp_name"], $imagePath)) 
                 {
                     $imageError = "Il y a eu une erreur lors de l'upload";
                     $isUploadSuccess = false;
@@ -92,7 +92,7 @@
             }
             
             Database::disconnect();
-            header("Location: index.php");// CHANGER LE NOM-----------------------------------------------------------------------------
+            header("Location: index.php");
         }
         else if($isImageUpdated && !$isUploadSuccess)
         {
@@ -103,8 +103,6 @@
             $image = $item['image'];
             Database::disconnect();
         }
-
-       
 
     }
     else
@@ -124,9 +122,9 @@
 
     function checkInput($data)
     {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
+        $data = trim($data);  // supprime les espaces les retour a la ligne
+        $data = stripslashes($data); //supprime les antislash
+        $data = htmlspecialchars($data); // previent de la faille XSS (INJECTION DE SCRIPT DS L'URL)
         return $data;
     }
 ?>
@@ -161,7 +159,7 @@
                     </div>
                     <div class="form-group">
                         <label for="description">Description :</label>
-                        <input type="text" class="form-control" id="description" name="description" placeholder="Description" value="<?php echo $description; ?>">
+                        <textarea id="description" name="description" class="form-control" placeholder="Description" style="height:200px" value="<?php echo $description; ?>"></textarea>
                         <span class="help-inline"><?php echo $descriptionError; ?></span>
                     </div>
                     <div class="form-group">

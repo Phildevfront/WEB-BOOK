@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
       
   if(!isEmail($array["email"])) 
   {
-    $array["emailError"] = "Ceci n'est pas une adresse email !";
+    $array["emailError"] = "Ce n'est pas une adresse email !";
     $array["isSuccess"] = false;
   }
   else
@@ -81,7 +81,7 @@ function verifyInput($var)// nettoyage des variables
 {
   $var = trim($var); // supprime les espaces les retour a la ligne
   $var = stripslashes($var); //supprime les antislash
-  $var = htmlspecialchars($var); // previent de la faille XXS (INJECTION DE SCRIPT DS L'URL)
+  $var = htmlspecialchars($var); // previent de la faille XSS (INJECTION DE SCRIPT DS L'URL)
   return $var;
 }
 

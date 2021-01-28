@@ -3,10 +3,10 @@
 class Database
 {
 
-    private static $dbHost = "localhost";
-    private static $dbName = "portfolio";
-    private static $dbUser = "root";
-    private static $dbUserPassword = "root";
+    private static $dbHost = "localhost"; //mask.o2switch.net
+    private static $dbName = "portfolio"; //baph4737_portfolio
+    private static $dbUser = "root"; // baph4737
+    private static $dbUserPassword = "root"; // RMRvNgmAVYNv
     
     private static $connection = null;
 
@@ -16,11 +16,11 @@ class Database
         try
         {
             self::$connection = new PDO("mysql:host=" . self::$dbHost .  ";dbname=" . 
-            self::$dbName,self::$dbUser,self::$dbUserPassword);  /* connection a la DB avc PDO*/ 
+            self::$dbName,self::$dbUser,self::$dbUserPassword);   
         }
         catch(PDOException $e) 
         {
-            die($e->getMessage()); /* Affiche message erreur*/
+            die($e->getMessage()); 
         }
         return  self::$connection;
 
