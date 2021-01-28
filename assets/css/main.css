@@ -158,7 +158,7 @@
 .name h1{
   font-family:'Raleway', sans-serif; 
   font-size: 4rem;
-  font-weight: 100;
+  font-weight: 300;
   letter-spacing: 6px;
   color: var(--white);
   text-shadow: 2px  2px 2px rgb(69, 69, 69);
@@ -174,30 +174,6 @@
   padding: 10px;
   border-radius: 5px;
 }
-
-
-/*.link-profil{
-  text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1em;
-  font-weight: 500;
-  letter-spacing: 2px;
-  color: rgb(0, 0, 0);
-  background-color:transparent;
-  text-decoration: none;
-  border: 1px solid rgb(0, 0, 0);
-  border-radius: 4px;
-  padding: 14px 60px 14px 60px;
-  transition: all 0.4s ease;
-  outline: none;
-}
-
-.link-profil:hover{
-  cursor: pointer;
-  background-color: var(--brightcyan);
-  border-color: var(--brightcyan);
-}*/
-
 
 span.material-icons {
   position: relative;
@@ -299,7 +275,6 @@ span.material-icons:hover{
 
 .link-download{
   text-decoration: none;
-  
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   font-weight: 500;
@@ -309,7 +284,7 @@ span.material-icons:hover{
   text-decoration: none;
   border: 1px solid rgb(0, 0, 0);
   border-radius: 4px;
-  padding: 12px 60px 17px 60px;
+  padding: 12px 65px 17px 60px;
   transition: all 0.4s ease;
   outline: none;
   margin-bottom: 20px;
@@ -321,7 +296,13 @@ span.material-icons:hover{
   border-color: var(--brightcyan);
 }
 
-.link-download .material-icons{
+
+#download.material-icons{
+  position: relative;
+  top: 6px;
+  left: 8px;
+  font-size: 24px; 
+  color: #000;
   transition: transform 0.4s;
 }
 
@@ -329,6 +310,7 @@ span.material-icons:hover{
   transform: rotate(90deg);
   transition: all 0.4s ease;
 }
+
   
 
 /*---------------------------------------------------SECTION PROJECTS--------------------------------------*/

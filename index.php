@@ -90,7 +90,7 @@
         <div class="btn-download">
           <a href="assets/cv/PhilippeBAURENS-CV.pdf" class="link-download" target="_blank" 
             download="PhilippeBAURENS-CV.pdf">Télécharger mon CV 
-            <span class="material-icons">
+            <span id="download" class="material-icons">
               get_app
             </span>
           </a>
