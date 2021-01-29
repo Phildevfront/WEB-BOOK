@@ -222,8 +222,8 @@
 
   @media screen and  (min-width:320px)  and (max-width:768px){
     .cover, .flip-card, .flip-card-inner, .flip-card-inner img, .flip-card-front, .flip-card-back {
-      width: 62vw;
-      height: 26vh;
+      width: 80vw;
+      height: 35vh;
     }
 
     #anchor2.projects{
