@@ -115,7 +115,7 @@
 
 
   img.brandlogo{
-    width: 50px;
+    width: 40px;
     position: relative;
     top: 6px;
     left: 10px;
@@ -157,38 +157,47 @@
 
 .name h1{
   font-family:'Raleway', sans-serif; 
-  font-size: 4rem;
+  font-size: 3.4rem;
   font-weight: 300;
   letter-spacing: 6px;
   color: var(--white);
-  text-shadow: 2px  2px 2px rgb(69, 69, 69);
+  text-shadow: 2px 2px 2px rgb(69, 69, 69);
 }
 
 .title h2{
-  margin: 30px 0;
+  margin: 50px 0;
   font-family:'Raleway', sans-serif; 
   font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 3px;
   color: var(--white);
-  padding: 10px;
-  border-radius: 5px;
+  padding: 10px 96px;
 }
 
-span.material-icons {
+.profile h3{
+  font-family:'Raleway', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border: 1px solid var(--white);
+  padding: 20px 30px;
+  color: var(--white);
+  margin-bottom:30px;
+}
+
+span#arrow.material-icons {
   position: relative;
   color: #ffffff;
-  font-size: 62px; 
+  font-size: 70px;
+  text-shadow: 0px 2px 2px rgb(69, 69, 69); 
+  animation: MoveUpDown 1.2s linear infinite;
 }
 
-span.material-icons{
-  transition: transform 0.4s;
+@keyframes MoveUpDown{ 
+  0%, 100% {bottom: 0;}
+  50% {bottom: 10px;}
 }
-
-span.material-icons:hover{
-  transform: rotate(90deg);
-  transition: all 0.4s ease;
-}
+ 
 
 
 /*----------------------------------------------SECTION ABOUT--------------------------------------*/
@@ -254,12 +263,8 @@ span.material-icons:hover{
   margin: 50px;
 }
 
-.research{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
+
+
 
 /*----------------------------------------------------SECTION DOWNLOAD------------------------------------*/
 .download{
@@ -292,12 +297,13 @@ span.material-icons:hover{
 
 .link-download:hover{
   cursor: pointer;
+  color: #f2f2f2;
   background-color: var(--brightcyan);
   border-color: var(--brightcyan);
 }
 
 
-#download.material-icons{
+span#download.material-icons{
   position: relative;
   top: 6px;
   left: 8px;
@@ -442,16 +448,12 @@ span.material-icons:hover{
   width: 500px; 
   height: 381px; 
   perspective: 1000px;
-  /*padding: 30px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 50px;*/
 }
 
 .flip-card-inner img{
   border-radius: 5px;
-  
 }
+
 .flip-card-inner {
   position: relative;
   width: 500px;
@@ -462,14 +464,12 @@ span.material-icons:hover{
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.781);
   border-radius: 5px;
-  
 }
 
 .flip-card:hover .flip-card-inner {
   cursor: pointer;
   transform: rotateY(180deg);
   border-radius: 5px;
-  
 }
 
 .flip-card-front, .flip-card-back {
@@ -681,6 +681,7 @@ ul.flex-row.footer-social{
 .copyright{
   text-align: center;
   font-size: 0.8em;
+  font-family: 'Raleway', sans-serif;
   letter-spacing: 0.2em;
   color: #b3b2b2c4;
   margin-top:100px;
@@ -713,5 +714,5 @@ i.fas.fa-envelope:hover{
 
 
 
-/*------------------------------------MEDIA QUERIES---------------------------------*/
+
  

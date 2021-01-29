@@ -44,8 +44,11 @@
         <div class="title">
           <h2>Développeur Web Full Stack JS</h2>
         </div>
+        <div class="profile">
+          <h3>VOIR MON PROFIL</h3>
+        </div>
         <div class="btn" dest="">
-            <a href="#anchor1" class="link-profil"><span class="material-icons">chevron_right</span></a>
+            <a href="#anchor1" class="link-profil"><span id="arrow" class="material-icons">keyboard_arrow_down</span></a>
         </div>
       </div>
     </header>
@@ -81,15 +84,12 @@
                 </p>
             </div>
           </div>
-          <div class="research">
-            <h3>Recherche alternance de 12 mois | Développeur Web Full Stack JS</h3>
-            </div>
       </section>
       <!---------------------------------------------------Download----------------------------------------------->
       <section class="download">
         <div class="btn-download">
-          <a href="assets/cv/PhilippeBAURENS-CV.pdf" class="link-download" target="_blank" 
-            download="PhilippeBAURENS-CV.pdf">Télécharger mon CV 
+          <a href="assets/cv/PhilippeBAURENS-CV-2021.pdf" class="link-download" target="_blank" 
+            download="PhilippeBAURENS-CV-2021.pdf">Télécharger mon CV 
             <span id="download" class="material-icons">
               get_app
             </span>
