@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 <?php
@@ -23,14 +23,13 @@ if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['password'])){
     $res = mysqli_query($conn, $query);
     if($res){
        echo "<div class='sucess'>
-             <h3>Vous êtes inscrit avec succès.</h3>
-             <p>Cliquez ici pour vous <a href='login.php'>connecter</a></p>
-			 </div>";
+       		<h3>Vous êtes inscrit avec succès.</h3>
+            <p>Cliquez ici pour vous <a href='login.php'>connecter</a></p>
+			</div>";
     }
 }else{
 ?>
 <form class="box" action="" method="post">
-	<!--<h1 class="box-logo box-title"><a href="https://waytolearnx.com/">WayToLearnX.com</a></h1>-->
     <h1 class="box-title">S'inscrire</h1>
 	<input type="text" class="box-input" name="username" placeholder="Nom d'utilisateur" required />
     <input type="text" class="box-input" name="email" placeholder="Email" required />

@@ -21,19 +21,19 @@
   </head>
   <body>
     <header class="home">
-      <div id="anchor0" class="nav-container">
+      <div id="home" class="nav-container">
         <nav id="nav" class="navbar nav-fixed">
-          <a href="http://philippebaurens.com/" id="navbar-logo" class="header_navbar-logo-title"><img class="brandlogo" src="assets/img/brand-logo/LogoSnapshotPB.png" alt="logo de Philippe Baurens"></a>
+          <a href="https://www.philippebaurens.com/" id="navbar-logo" class="header_navbar-logo-title"><img class="brandlogo" src="assets/img/brand-logo/LogoSnapshotPB.png" alt="logo de Philippe Baurens"></a>
           <div class="menu-toggle" id="mobile-menu">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
           </div>
           <ul class="nav-menu">
-            <li><a href="#anchor0" class="nav-links">HOME</a></li>
-            <li><a href="#anchor1" class="nav-links">A PROPOS</a></li>
-            <li><a href="#anchor2" class="nav-links">PROJETS</a></li>
-            <li><a href="#anchor3" class="nav-links">CONTACT</a></li>
+            <li><a href="#home" class="nav-links">HOME</a></li>
+            <li><a href="#apropos" class="nav-links">A PROPOS</a></li>
+            <li><a href="#projets" class="nav-links">PROJETS</a></li>
+            <li><a href="#contact" class="nav-links">CONTACT</a></li>
           </ul>
         </nav>
       </div>
@@ -48,13 +48,13 @@
           <h3>VOIR MON PROFIL</h3>
         </div>
         <div class="btn" dest="">
-            <a href="#anchor1" class="link-profil"><span id="arrow" class="material-icons">keyboard_arrow_down</span></a>
+            <a href="#apropos" class="link-profil"><span id="arrow" class="material-icons">keyboard_arrow_down</span></a>
         </div>
       </div>
     </header>
     <main>
       <!----------------------------------------------A PROPOS--------------------------------------------->
-      <section id="anchor1" class="about">
+      <section id="apropos" class="about">
           <div class="container-title-section">
             <div class="title-section">
               <h2>A PROPOS</h2>
@@ -97,7 +97,7 @@
         </div>
       </section>
       <!----------------------------------------------------PROJET--------------------------------------------------->
-      <section id="anchor2" class="projects">
+      <section id="projets" class="projects">
         <div class="container-title-section">
           <div class="title-section">
             <h2>projets</h2>
@@ -166,7 +166,7 @@
           ?> 
       </section>
       <!------------------------------------------CONTACT---------------------------------------------------->
-      <section id="anchor3" class="contact"> 
+      <section id="contact" class="contact"> 
         <div class="container-title-section">
           <div class="title-section">
             <h2>CONTACT</h2>

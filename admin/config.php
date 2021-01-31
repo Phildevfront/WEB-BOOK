@@ -1,5 +1,4 @@
 <?php
-
 define('DB_SERVER', 'localhost'); // mask.o2switch.net
 define('DB_USERNAME', 'root'); // baph4737
 define('DB_PASSWORD', 'root'); // RMRvNgmAVYNv

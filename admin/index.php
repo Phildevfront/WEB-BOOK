@@ -1,18 +1,15 @@
-
 <?php
-	
-	session_start();
-	
-	if(!isset($_SESSION["username"])){
-		header("Location: login.php");
-		exit(); 
-	}
+session_start();
+if(!isset($_SESSION['username'])){
+header("location: login.php");
+exit(); 
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>ADMIN WEB BOOK</title>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -23,7 +20,7 @@
 </head>
 <body>
     <div class="sucess">
-		<h2>Bienvenue dans votre panel <?php echo $_SESSION['username'];?> !</h2>
+		<h2>Bienvenue dans votre panel <?php echo $_SESSION['username']; ?> !</h2>
 		<a href="logout.php">Déconnexion</a>
 		</div>
     <div class="title-admin">
@@ -43,7 +40,6 @@
                     </tr>
                 </thead>
                 <tbody>
-
                     <?php
                     require 'database.php';
                     $db = Database::connect();
