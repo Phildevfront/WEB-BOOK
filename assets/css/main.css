@@ -202,7 +202,7 @@ span#arrow.material-icons {
 
 /*----------------------------------------------SECTION ABOUT--------------------------------------*/
 
-#anchor1.about{
+#apropos.about{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -321,7 +321,7 @@ span#download.material-icons{
 
 /*---------------------------------------------------SECTION PROJECTS--------------------------------------*/
 
-#anchor2.projects{
+#projets.projects{
   width: 100vw;
   background-color: #f5f5f5;;
   display: flex;
