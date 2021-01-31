@@ -3,10 +3,10 @@
 class Database
 {
 
-    private static $dbHost = "localhost"; //mask.o2switch.net
-    private static $dbName = "portfolio"; //baph4737_portfolio
-    private static $dbUser = "root"; // baph4737
-    private static $dbUserPassword = "root"; // RMRvNgmAVYNv
+    private static $dbHost = "Localhost"; 
+    private static $dbName = "portfolio"; 
+    private static $dbUser = "root"; 
+    private static $dbUserPassword = "root";  
     
     private static $connection = null;
 
