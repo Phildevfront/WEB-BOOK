@@ -2,6 +2,12 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MD1QEF8K0S"></script>
+      <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());gtag('config', 'G-MD1QEF8K0S');
+      </script>
+      
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="assets/css/main.css">
@@ -248,6 +254,7 @@
         </section>
       </footer>    
     </main>
+   
     <script type="text/javascript" src="assets/js/form-script.js"></script>
     <script type="text/javascript" src="assets/js/nav-filter.js"></script>
     <script type="text/javascript" src="assets/js/app.js"></script>
